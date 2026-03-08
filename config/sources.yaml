@@ -1,0 +1,99 @@
+# ============================================================
+# sources.yaml — 数据源注册表
+# ============================================================
+panel:
+  start_year: 2008
+  end_year: 2023
+  units: "50 states + DC"
+  key_vars: ["state_fips", "state_abbr", "year"]
+
+min_wage:
+  primary:
+    name: "Vaghul & Zipperer Historical Minimum Wage"
+    url: "https://github.com/benzipperer/historicalminwage"
+    file: "state_minimum_wage.csv"
+    coverage: "1974–present"
+    freq: "monthly"
+    note: "Need year-end or annual avg binding MW"
+  supplement:
+    name: "FRED STTMINWG series"
+    url: "https://fred.stlouisfed.org/"
+    note: "Cross-validation and gap-fill for recent years"
+
+housing:
+  contract_rent:
+    name: "ACS 1-Year Table B25058"
+    source: "Census Bureau / data.census.gov"
+    api: "https://api.census.gov/data/{year}/acs/acs1"
+    variable: "B25058_001E"
+    geo: "state:*"
+    coverage: "2005–2023 (1-year estimates)"
+    unit: "monthly dollars (nominal)"
+  gross_rent:
+    name: "ACS 1-Year Table B25064"
+    source: "Census Bureau / data.census.gov"
+    api: "https://api.census.gov/data/{year}/acs/acs1"
+    variable: "B25064_001E"
+    geo: "state:*"
+    coverage: "2005–2023"
+    unit: "monthly dollars (nominal)"
+    note: "Robustness only — includes some utilities"
+
+utilities:
+  electricity:
+    name: "EIA Average Retail Price of Electricity - Residential"
+    url: "https://api.eia.gov/v2/electricity/retail-sales/data/"
+    params:
+      frequency: "annual"
+      data: ["revenue", "sales", "customers", "price"]
+      facets:
+        sectorid: ["RES"]
+        stateid: ["all"]
+    coverage: "2001–2023"
+    unit: "cents/kWh (price), or dollars (revenue/customers)"
+  natural_gas:
+    name: "EIA Natural Gas Residential Price"
+    url: "https://api.eia.gov/v2/natural-gas/pri/sum/data/"
+    params:
+      frequency: "annual"
+      data: ["value"]
+      facets:
+        process: ["PRS"]
+    coverage: "1967–2023"
+    unit: "$/Mcf"
+    note: "Need to convert to avg monthly bill via consumption data"
+
+food:
+  tfp:
+    name: "USDA Thrifty Food Plan - Cost of Food Reports"
+    url: "https://www.fns.usda.gov/cnpp/usda-food-plans-cost-food-reports"
+    coverage: "1994–present (monthly reports)"
+    unit: "monthly cost per reference family (national)"
+    note: "Must annualize; AK/HI have separate adjustments"
+  rpp_goods:
+    name: "BEA Regional Price Parities - Goods"
+    url: "https://apps.bea.gov/regional/downloadzip.htm"
+    table: "SARPP"
+    line_code: "2"
+    coverage: "2008–2023"
+    unit: "index (US=100)"
+
+controls:
+  rpp_all:
+    name: "BEA RPP All Items"
+    table: "SARPP"
+    line_code: "1"
+  rpp_rents:
+    name: "BEA RPP Rents"
+    table: "SARPP"
+    line_code: "3"
+  cpi_u:
+    name: "BLS CPI-U Annual Average"
+    series_id: "CUUR0000SA0"
+  poverty:
+    name: "ACS Table S1701"
+    variable: "S1701_C03_001E"
+  median_income:
+    name: "ACS Table B19013"
+    variable: "B19013_001E"
+

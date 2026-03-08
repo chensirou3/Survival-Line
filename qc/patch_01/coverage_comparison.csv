@@ -1,0 +1,10 @@
+variable,pre_patch_nonmissing,post_patch_nonmissing,gained,pre_pct,post_pct
+survival_line_nominal_main,612,765,153,75.0,93.8
+survival_line_nominal_no_gas,612,765,153,75.0,93.8
+electric_bill_monthly,663,816,153,81.2,100.0
+min_wage_nominal,765,816,51,93.8,100.0
+binding_min_wage,765,816,51,93.8,100.0
+contract_rent_monthly,765,765,0,93.8,93.8
+food_reconstructed_annual,816,816,0,100.0,100.0
+gas_bill_monthly,816,816,0,100.0,100.0
+annualized_mw_income,765,816,51,93.8,100.0

@@ -1,0 +1,2 @@
+module,n_states,expected_states,years_covered,missing_years,total_expected,total_actual,missing_pct
+min_wage,51,51,2008-2022,[2023],816,765,6.25

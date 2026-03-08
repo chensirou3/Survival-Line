@@ -1,0 +1,8 @@
+variable,missing,pct
+contract_rent_monthly,51,6.25
+electric_bill_monthly,153,18.75
+gas_bill_monthly,0,0.0
+food_reconstructed_annual,0,0.0
+survival_line_nominal_main,204,25.0
+binding_min_wage,51,6.25
+annualized_mw_income,51,6.25

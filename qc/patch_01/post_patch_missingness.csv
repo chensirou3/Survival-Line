@@ -1,0 +1,16 @@
+,missing_count,missing_pct
+poverty_rate,153,18.75
+contract_rent_monthly,51,6.25
+gross_rent_monthly,51,6.25
+contract_rent_annual,51,6.25
+gross_rent_annual,51,6.25
+median_hh_income,51,6.25
+survival_line_nominal_main,51,6.25
+survival_line_nominal_grossrent,51,6.25
+survival_line_nominal_no_gas,51,6.25
+mw_survival_gap_main,51,6.25
+mw_survival_ratio_main,51,6.25
+mw_survival_gap_grossrent,51,6.25
+mw_survival_ratio_grossrent,51,6.25
+mw_survival_gap_no_gas,51,6.25
+mw_survival_ratio_no_gas,51,6.25

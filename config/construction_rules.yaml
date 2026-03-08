@@ -1,0 +1,46 @@
+# ============================================================
+# construction_rules.yaml — Survival Line 构造规则
+# ============================================================
+
+main_specification:
+  name: "survival_v_main"
+  formula: "12 * ContractRent + Food_reconstructed + 12 * ElecBill + 12 * GasBill"
+  components:
+    housing: "contract_rent_monthly * 12"
+    food: "tfp_national_annual * (rpp_goods_index / 100)"
+    electricity: "electric_bill_monthly * 12"
+    gas: "gas_bill_monthly * 12"
+  notes:
+    - "Contract Rent (B25058) does NOT include utilities"
+    - "Food is reconstructed, not directly observed"
+    - "AK/HI use state-specific TFP adjustments"
+
+robustness_versions:
+  grossrent:
+    name: "survival_v_grossrent"
+    formula: "12 * GrossRent + Food_reconstructed"
+    note: "Gross Rent includes utilities; do NOT add utility bills"
+  no_gas:
+    name: "survival_v_no_gas"
+    formula: "12 * ContractRent + Food_reconstructed + 12 * ElecBill"
+    note: "For states with missing/unreliable gas data"
+
+minimum_wage_analysis:
+  annualized_income: "binding_min_wage * 2080"
+  gap: "annualized_mw_income - survival_line"
+  ratio: "annualized_mw_income / survival_line"
+  binding_rule: "max(state_min_wage, federal_min_wage)"
+  hours_per_year: 2080
+  note: "2080 = 40 hours/week * 52 weeks"
+
+special_rules:
+  alaska_hawaii:
+    description: "Use USDA state-specific TFP cost data when available"
+    flag: "construction_flag_food = 'AK_HI_adjusted'"
+  food_reconstruction:
+    flag_value: "reconstructed"
+    description: "All food values are TFP*RPP, not direct observations"
+  double_counting:
+    rule: "Never combine Gross Rent with independent utility bills without flag"
+    check: "qc/consistency/double_count_check.csv"
+

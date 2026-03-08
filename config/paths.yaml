@@ -1,0 +1,38 @@
+# ============================================================
+# paths.yaml — 项目路径配置
+# ============================================================
+project_root: "."
+
+data_raw:
+  panel_skeleton: "data_raw/panel_skeleton"
+  min_wage: "data_raw/min_wage"
+  housing: "data_raw/housing"
+  utilities: "data_raw/utilities"
+  food: "data_raw/food"
+  price_adjustment: "data_raw/price_adjustment"
+  controls: "data_raw/controls"
+
+data_clean:
+  min_wage: "data_clean/min_wage"
+  housing: "data_clean/housing"
+  utilities: "data_clean/utilities"
+  food: "data_clean/food"
+  controls: "data_clean/controls"
+  merged: "data_clean/merged"
+
+data_final:
+  survival_main: "data_final/survival_main"
+  survival_robustness: "data_final/survival_robustness"
+  export: "data_final/export"
+
+logs:
+  download: "logs/download_logs"
+  cleaning: "logs/cleaning_logs"
+  qc: "logs/qc_logs"
+
+qc:
+  coverage: "qc/coverage"
+  missingness: "qc/missingness"
+  outliers: "qc/outliers"
+  consistency: "qc/consistency"
+
