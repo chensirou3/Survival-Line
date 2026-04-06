@@ -1,0 +1,7 @@
+Module,Rows,Expected,Coverage%,States,Missing_Years,Merge_Ready
+Panel Skeleton,816,816,100.0,51,none,YES
+Minimum Wage,816,816,100.0,51,none,YES
+Housing,765,816,93.8,51,[2020],YES
+Utilities,816,816,100.0,51,none,YES
+Food,816,816,100.0,51,none,YES
+Controls,816,816,100.0,51,none,YES

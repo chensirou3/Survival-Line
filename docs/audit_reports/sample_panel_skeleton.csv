@@ -1,0 +1,26 @@
+state_fips,state_abbr,state_name,year,census_region,census_division
+06,CA,California,2008,West,Pacific
+06,CA,California,2012,West,Pacific
+06,CA,California,2016,West,Pacific
+06,CA,California,2020,West,Pacific
+06,CA,California,2023,West,Pacific
+12,FL,Florida,2008,South,South Atlantic
+12,FL,Florida,2012,South,South Atlantic
+12,FL,Florida,2016,South,South Atlantic
+12,FL,Florida,2020,South,South Atlantic
+12,FL,Florida,2023,South,South Atlantic
+17,IL,Illinois,2008,Midwest,East North Central
+17,IL,Illinois,2012,Midwest,East North Central
+17,IL,Illinois,2016,Midwest,East North Central
+17,IL,Illinois,2020,Midwest,East North Central
+17,IL,Illinois,2023,Midwest,East North Central
+36,NY,New York,2008,Northeast,Middle Atlantic
+36,NY,New York,2012,Northeast,Middle Atlantic
+36,NY,New York,2016,Northeast,Middle Atlantic
+36,NY,New York,2020,Northeast,Middle Atlantic
+36,NY,New York,2023,Northeast,Middle Atlantic
+48,TX,Texas,2008,South,West South Central
+48,TX,Texas,2012,South,West South Central
+48,TX,Texas,2016,South,West South Central
+48,TX,Texas,2020,South,West South Central
+48,TX,Texas,2023,South,West South Central

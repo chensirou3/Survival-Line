@@ -1,0 +1,20 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_survival_line_nominal_main,1 (IQR×3),PASS
+range_survival_line_nominal_main,12467.49 – 39817.81,INFO
+mean_survival_line_nominal_main,19325.29,INFO
+outliers_contract_rent_annual,0 (IQR×3),PASS
+range_contract_rent_annual,4764.00 – 21840.00,INFO
+mean_contract_rent_annual,9765.99,INFO
+outliers_electric_bill_annual,1 (IQR×3),PASS
+range_electric_bill_annual,758.92 – 2658.31,INFO
+mean_electric_bill_annual,1354.19,INFO
+outliers_gas_bill_annual,16 (IQR×3),WARN
+range_gas_bill_annual,384.00 – 3447.60,INFO
+mean_gas_bill_annual,762.48,INFO
+outliers_food_reconstructed_annual,153 (IQR×3),WARN
+range_food_reconstructed_annual,5186.57 – 12917.10,INFO
+mean_food_reconstructed_annual,7419.86,INFO
+outliers_binding_min_wage,26 (IQR×3),WARN
+range_binding_min_wage,6.55 – 17.00,INFO
+mean_binding_min_wage,8.35,INFO

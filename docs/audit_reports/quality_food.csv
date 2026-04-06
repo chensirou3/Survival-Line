@@ -1,0 +1,11 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_tfp_national_annual,153 (IQR×3),WARN
+range_tfp_national_annual,6151.20 – 11706.00,INFO
+mean_tfp_national_annual,7515.73,INFO
+outliers_rpp_goods_index,0 (IQR×3),PASS
+range_rpp_goods_index,84.32 – 116.58,INFO
+mean_rpp_goods_index,98.74,INFO
+outliers_food_reconstructed_annual,153 (IQR×3),WARN
+range_food_reconstructed_annual,5186.57 – 12917.10,INFO
+mean_food_reconstructed_annual,7419.86,INFO

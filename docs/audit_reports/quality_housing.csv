@@ -1,0 +1,8 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_contract_rent_monthly,0 (IQR×3),PASS
+range_contract_rent_monthly,397.00 – 1820.00,INFO
+mean_contract_rent_monthly,813.83,INFO
+outliers_gross_rent_monthly,0 (IQR×3),PASS
+range_gross_rent_monthly,528.00 – 1992.00,INFO
+mean_gross_rent_monthly,954.84,INFO

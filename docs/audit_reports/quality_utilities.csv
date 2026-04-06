@@ -1,0 +1,11 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_electric_bill_monthly,1 (IQR×3),PASS
+range_electric_bill_monthly,63.24 – 221.53,INFO
+mean_electric_bill_monthly,112.85,INFO
+outliers_gas_bill_monthly,16 (IQR×3),WARN
+range_gas_bill_monthly,32.00 – 287.30,INFO
+mean_gas_bill_monthly,63.54,INFO
+outliers_gas_bill_annual,16 (IQR×3),WARN
+range_gas_bill_annual,384.00 – 3447.60,INFO
+mean_gas_bill_annual,762.48,INFO

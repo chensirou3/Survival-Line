@@ -1,0 +1,15 @@
+variable_name,module,source_institution,dataset_name,geography_level,time_coverage,direct_or_reconstructed,used_in_main_spec,notes
+state_fips / state_abbr / state_name,Panel Skeleton,U.S. Census Bureau,FIPS State Codes (ANSI),State,2008–2023,direct,yes (index),51 units: 50 states + DC
+min_wage_nominal,Minimum Wage,Vaghul & Zipperer; DOL/EPI,Historical State and Sub-State Minimum Wages (v1.4.0) + DOL 2023 supplement,State,2008–2023,direct,yes,2008–2022 from V&Z GitHub; 2023 from DOL/EPI manual coding (Patch 02)
+federal_min_wage,Minimum Wage,U.S. DOL,Federal Minimum Wage History,National,2008–2023,direct,yes (via binding_min_wage),$7.25 since July 2009
+binding_min_wage,Minimum Wage,Constructed,"max(state_min_wage, federal_min_wage)",State,2008–2023,constructed,yes,Effective minimum wage facing workers in each state
+contract_rent_monthly,Housing,U.S. Census Bureau,"ACS 1-Year Estimates, Table B25058 (Median Contract Rent)",State,"2008–2019, 2021–2023",direct,yes,2020 missing: Census did not release ACS 1-year due to COVID
+electric_bill_monthly,Utilities,U.S. EIA,Revenue & Customers annual files (2008–2020); Form HS861 (2021–2023),State,2008–2023,reconstructed,yes,Bill = Revenue / (Customers × 12). Patch 01 extended via HS861 2010-.xlsx
+gas_bill_monthly,Utilities,U.S. EIA,Natural Gas Residential Price ($/MCF),State,2008–2023,reconstructed,yes,Estimated: price_per_MCF × 5 MCF/month (national avg consumption from RECS)
+tfp_national_annual,Food,USDA FNS,Thrifty Food Plan: Cost of Food Reports,National,2008–2023,direct,yes (component of food_reconstructed),"Monthly TFP for 4-person reference family, annualized. 2021 TFP revision ($577→$836/mo)"
+rpp_goods_index,Food,U.S. BEA,"Regional Price Parities by State (SARPP, LineCode=2)",State,2008–2023,direct,yes (component of food_reconstructed),"Index, US=100. Used to adjust national TFP to state-level food cost"
+food_reconstructed_annual,Food,Constructed,TFP_national × (RPP_goods / 100),State,2008–2023,reconstructed,yes,NOT directly observed. Reconstructed from national TFP × state RPP goods index
+poverty_rate,Controls,U.S. Census Bureau,"ACS 1-Year, Subject Table S1701 (S1701_C03_001E)",State,2008–2023 (excl. 2020),direct,control variable,Percent below poverty level. Missing 2020 + some early years
+median_hh_income,Controls,U.S. Census Bureau,"ACS 1-Year, Table B19013 (B19013_001E)",State,2008–2023 (excl. 2020),direct,control variable,Median household income in past 12 months (nominal dollars)
+rpp_all / rpp_rents,Controls,U.S. BEA,"Regional Price Parities (SARPP, LineCode=1,3)",State,2008–2023,direct,control variable,"RPP All Items (LC=1) and RPP Rents (LC=3). Index, US=100"
+survival_line_nominal_main,Construct,Constructed,12×ContractRent + Food_reconstructed + 12×ElecBill + 12×GasBill,State,"2008–2019, 2021–2023",constructed,yes (outcome),Main Survival Line. Missing 2020 due to ACS housing gap

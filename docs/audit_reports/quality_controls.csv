@@ -1,0 +1,14 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_poverty_rate,0 (IQR×3),PASS
+range_poverty_rate,7.20 – 24.20,INFO
+mean_poverty_rate,13.73,INFO
+outliers_median_hh_income,0 (IQR×3),PASS
+range_median_hh_income,36646.00 – 108210.00,INFO
+mean_median_hh_income,59107.56,INFO
+outliers_rpp_all,0 (IQR×3),PASS
+range_rpp_all,85.02 – 114.24,INFO
+mean_rpp_all,97.52,INFO
+outliers_rpp_rents,0 (IQR×3),PASS
+range_rpp_rents,53.83 – 191.34,INFO
+mean_rpp_rents,94.04,INFO

@@ -1,0 +1,11 @@
+check,result,status
+duplicate_keys,0,PASS
+outliers_min_wage_nominal,26 (IQR×3),WARN
+range_min_wage_nominal,6.55 – 17.00,INFO
+mean_min_wage_nominal,8.35,INFO
+outliers_binding_min_wage,26 (IQR×3),WARN
+range_binding_min_wage,6.55 – 17.00,INFO
+mean_binding_min_wage,8.35,INFO
+outliers_annualized_mw_income,26 (IQR×3),WARN
+range_annualized_mw_income,13624.00 – 35360.00,INFO
+mean_annualized_mw_income,17367.62,INFO
