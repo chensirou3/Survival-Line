@@ -1,0 +1,15 @@
+Variable,(1) Pooled OLS,(2) Pooled OLS + Controls,(3) TWFE,(4) TWFE + Controls
+Binding Minimum Wage,230.97**,1854.30***,1643.22***,1958.41***
+,(90.77),(114.58),(90.89),(42.95)
+Poverty Rate,,-523.74***,,-24.19
+,,(104.82),,(48.59)
+Median Household Income,,-0.3743***,,-0.2355***
+,,(0.0299),,(0.0235)
+Regional Price Parity (RPP-All),,-46.38,,-139.45***
+,,(41.69),,(32.76)
+Observations,663,663,663,663
+R-squared,0.016,0.728,0.855,0.939
+State FE,No,No,Yes,Yes
+Year FE,No,No,Yes,Yes
+Controls,No,Yes,No,Yes
+State-clustered SE,Yes,Yes,Yes,Yes

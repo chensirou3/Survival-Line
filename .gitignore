@@ -29,3 +29,8 @@ logs/**/*.log
 # Temporary / diagnostic scripts
 scripts/_diag_*.py
 
+# Paper drafts (private)
+论文/
+
+# SpecStory / IDE caches
+.specstory/

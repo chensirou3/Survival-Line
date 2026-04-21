@@ -1,0 +1,17 @@
+Variable,(1) Main TWFE + Controls,(2) Gross Rent Definition,(3) Above-Federal States,(4) Log(MW)
+Binding Minimum Wage,1958.41***,1965.23***,1951.67***,
+,(42.95),(41.96),(90.44),
+Log(Binding Minimum Wage),,,,19296.23***
+,,,,(512.30)
+Poverty Rate,-24.19,-23.43,-31.85,-0.81
+,(48.59),(46.19),(72.80),(56.39)
+Median Household Income,-0.2355***,-0.2323***,-0.2450***,-0.1747***
+,(0.0235),(0.0230),(0.0374),(0.0327)
+Regional Price Parity (RPP-All),-139.45***,-149.73***,-151.54***,-135.54***
+,(32.76),(31.43),(45.80),(41.10)
+Observations,663,663,403,663
+R-squared,0.939,0.938,0.858,0.929
+State FE,Yes,Yes,Yes,Yes
+Year FE,Yes,Yes,Yes,Yes
+Controls,Yes,Yes,Yes,Yes
+State-clustered SE,Yes,Yes,Yes,Yes

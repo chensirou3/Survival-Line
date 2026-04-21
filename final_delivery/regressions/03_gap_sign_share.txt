@@ -1,0 +1,3 @@
+Valid obs: 765
+Share negative (insufficient): 0.7255
+Share non-negative (sufficient): 0.2745
